@@ -3,11 +3,15 @@
   <body>
     <h1>Simulador de Control de Autitos</h1>
     <form id="comandos-form">
-      <label for="comando">Ingrese comandos (Ej: 5,5/1,2N/IAIAIAIAA):</label>
-      <input type="text" id="comando" required />
+      <label for="comando">Comandos:</label><br/>
+      <textarea id="comando" rows="3" cols="30" required></textarea><br/>
       <input type="submit" value="Ejecutar" id="ejecutar-button" />
     </form>
-    <div id="resultado-div"></div>
+    <div>
+      <p>Posición Inicial: <span id="posicion-inicial">---</span></p>
+      <p>Comandos: <span id="comandos-ejecutados">---</span></p>
+      <p>Posición Final: <span id="posicion-final">---</span></p>
+    </div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
