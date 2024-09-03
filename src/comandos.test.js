@@ -6,7 +6,9 @@ describe("Comandos para mover el auto", () => {
       expect(comsAuto("ADI")).toEqual("ADI");
     });
  
-
+    it("Solo deja ingresar elementos tipo cadena", () => {
+        expect(comsAuto(45)).toEqual("Formato incorrecto");
+    });
 
 
 });
