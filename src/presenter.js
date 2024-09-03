@@ -1,15 +1,23 @@
-import sumar from "./sumador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+import { parseCommand, moveCar } from "./app.js";
+
+const form = document.querySelector("#comandos-form");
+const commandInput = document.querySelector("#comando");
+const posicionInicial = document.querySelector("#posicion-inicial");
+const comandosEjecutados = document.querySelector("#comandos-ejecutados");
+const posicionFinal = document.querySelector("#posicion-final");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const input = commandInput.value;
+  const { grid, car, commands } = parseCommand(input);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  
+  posicionInicial.textContent = `${car.x},${car.y}${car.direction}`;
+
+  comandosEjecutados.textContent = commands.join('');
+
+  const finalPosition = moveCar(grid, car, commands);
+  posicionFinal.textContent = `${finalPosition.x},${finalPosition.y}${finalPosition.direction}`;
 });

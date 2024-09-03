@@ -52,6 +52,7 @@ export function parseCommand(input) {
   }
   
   function turnLeft(car) {
+    
     const directions = ['N', 'O', 'S', 'E'];
     car.direction = directions[(directions.indexOf(car.direction) + 1) % 4];
   }
