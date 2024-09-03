@@ -1,18 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Controlador de autos a control remoto</h1>
+  <form id="controlador-auto">
+    <label for="coms-auto">Comandos:</label>
+    <input type="text" id="coms-auto" />
+    <input type="submit" value="Ejecutar" id="ejecutar-boton" />
+  </form>
+  <div id="resultado-div"></div>
 
-<html>
-  <body>
-    <h1>Simulador de Control de Autitos</h1>
-    <form id="comandos-form">
-      <label for="comando">Comandos:</label><br/>
-      <textarea id="comando" rows="3" cols="30" required></textarea><br/>
-      <input type="submit" value="Ejecutar" id="ejecutar-button" />
-    </form>
-    <div>
-      <p>Posición Inicial: <span id="posicion-inicial">---</span></p>
-      <p>Comandos: <span id="comandos-ejecutados">---</span></p>
-      <p>Posición Final: <span id="posicion-final">---</span></p>
-    </div>
-
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+  <script type="module" src="./src/presenter.js"></script>
+</body>
 </html>
+
+
