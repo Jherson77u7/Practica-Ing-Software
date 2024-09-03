@@ -11,7 +11,7 @@ function verificarFormato(cadena){
     }
     return result;
 }
-function posAuto(coordenadas){
+function posAuto(coordenadas){  
     var pos;
     if(verificarFormato(coordenadas)){
         pos = coordenadas;
