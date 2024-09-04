@@ -35,4 +35,9 @@ describe("Comandos para mover el auto", () => {
         ejecutarComando("D",automovil);
         expect(automovil.getOrientacion).toEqual("N");
     });
+    it("Ejecuta el comando D con coordenadas 5,8N, deberia moverse al E", () => {
+        const automovil = new auto("5,8EN");
+        ejecutarComando("D",automovil);
+        expect(automovil.getOrientacion).toEqual("E");
+    });
 });
