@@ -20,4 +20,9 @@ describe("Comandos para mover el auto", () => {
         ejecutarComando("I",automovil);
         expect(automovil.getOrientacion).toEqual("O");
     });
+    it("Ejecuta el comando I incorrectamente", () => {
+        const automovil = new auto("5,8N");
+        ejecutarComando("Z",automovil);
+        expect(automovil.getOrientacion).toEqual("N");
+    });
 });
