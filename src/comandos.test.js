@@ -79,4 +79,11 @@ describe("Comandos para mover el auto", () => {
         expect(automovil.getPosY).toEqual(2);
         expect(automovil.getOrientacion).toEqual("E");
     });
+    it("Se prueba los limites en y", () => {
+        const automovil = new auto("1,1N","1,3");
+        ejecutarComando("AAAAAA",automovil);
+        expect(automovil.getPosX).toEqual(1);
+        expect(automovil.getPosY).toEqual(3);
+        expect(automovil.getOrientacion).toEqual("N");
+    });
 });
