@@ -72,4 +72,11 @@ describe("Comandos para mover el auto", () => {
         expect(automovil.getPosY).toEqual(2);
         expect(automovil.getOrientacion).toEqual("E");
     });
+    it("Ejecuta comandos estando en el N sin limites en x e y (-1,-1)", () => {
+        const automovil = new auto("1,1N");
+        ejecutarComando("ADDIAADI",automovil);
+        expect(automovil.getPosX).toEqual(3);
+        expect(automovil.getPosY).toEqual(2);
+        expect(automovil.getOrientacion).toEqual("E");
+    });
 });
