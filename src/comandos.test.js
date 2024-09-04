@@ -15,4 +15,9 @@ describe("Comandos para mover el auto", () => {
     it("Solo permite el formato establecido(solo mayusculas y letras I, D, A)", () => {
         expect(comsAuto("ADIAAI")).toEqual("ADIAAI");
     });
+    it("Ejecuta el comando I", () => {
+        const automovil = new auto("5,8N");
+        ejecutarComando("I",automovil);
+        expect(automovil.getOrientacion).toEqual("O");
+    });
 });
