@@ -25,4 +25,9 @@ describe("Comandos para mover el auto", () => {
         ejecutarComando("Z",automovil);
         expect(automovil.getOrientacion).toEqual("N");
     });
+    it("Ejecuta el comando I con una pos inicial de 5,8E", () => {
+        const automovil = new auto("5,8E");
+        ejecutarComando("I",automovil);
+        expect(automovil.getOrientacion).toEqual("N");
+    });
 });
