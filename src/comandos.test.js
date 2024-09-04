@@ -60,5 +60,9 @@ describe("Comandos para mover el auto", () => {
         ejecutarComando("A",automovil);
         expect(automovil.getPosY).toEqual(7);
     });
-
+    it("Ejecuta el comando A con orientacion O", () => {
+        const automovil = new auto("5,8O");
+        ejecutarComando("A",automovil);
+        expect(automovil.getPosX).toEqual(4);
+    });
 });
