@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Controlador de Autos a Control Remoto</title>
+  <style>
+    #coms-auto {
+      width: 300px; 
+      height: 100px; 
+      padding: 10px; 
+      font-size: 16px; 
+      resize: none;
+      overflow: auto; 
+    }
+  </style>
 </head>
 <body>
   <h1>Controlador de autos a control remoto</h1>
+  <label for="coms-auto">Comandos:</label>
   <form id="controlador-auto">
-    <label for="coms-auto">Comandos:</label>
-    <input type="text" id="coms-auto" />
+        <textarea id="coms-auto"></textarea>
     <input type="submit" value="Ejecutar" id="ejecutar-boton" />
   </form>
   <div id="resultado-div"></div>
@@ -17,5 +27,3 @@
   <script type="module" src="./src/presenter.js"></script>
 </body>
 </html>
-
-
