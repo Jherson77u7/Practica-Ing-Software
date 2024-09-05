@@ -38,4 +38,10 @@ describe("Posicion del auto", () => {
         automovil.setPosY = 1;
         expect(automovil.getPosY).toEqual(6);
       });
+    it("clase auto puede devolver y modificar la orientacion" , () => {
+        const automovil = new auto("2,5N");
+        expect(automovil.getOrientacion).toEqual("N");
+        automovil.setOrientacion = "S";
+        expect(automovil.getOrientacion).toEqual("S");
+    });
 });
