@@ -32,4 +32,10 @@ describe("Posicion del auto", () => {
         automovil.setPosX = 1;
         expect(automovil.getPosX).toEqual(3);
     });
+    it("clase auto puede devolver y modificar la pos y" , () => {
+        const automovil = new auto("2,5N");
+        expect(automovil.getPosY).toEqual(5);
+        automovil.setPosY = 1;
+        expect(automovil.getPosY).toEqual(6);
+      });
 });
