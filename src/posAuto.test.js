@@ -49,4 +49,8 @@ describe("Posicion del auto", () => {
         expect(automovil.getLimX).toEqual(1);
         expect(automovil.getLimY).toEqual(2);
     });
+    it("clase auto muestra su pos actual" , () => {
+        const automovil = new auto("2,5N","1,2");
+        expect(automovil.mostrarPosicion()).toEqual("2,5N");
+    });
 });
