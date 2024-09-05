@@ -44,4 +44,9 @@ describe("Posicion del auto", () => {
         automovil.setOrientacion = "S";
         expect(automovil.getOrientacion).toEqual("S");
     });
+    it("clase auto se añade limites y se puede devolver el limite de X y de Y" , () => {
+        const automovil = new auto("2,5N","1,2");
+        expect(automovil.getLimX).toEqual(1);
+        expect(automovil.getLimY).toEqual(2);
+    });
 });
