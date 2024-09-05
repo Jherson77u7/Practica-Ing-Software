@@ -55,6 +55,43 @@ describe("Comandos para mover el auto", () => {
         ejecutarComando("A",automovil);
         expect(automovil.getPosX).toEqual(6);
     });
+    it("Ejecuta el comando A con orientacion S", () => {
+        const automovil = new auto("5,8S");
+        ejecutarComando("A",automovil);
+        expect(automovil.getPosY).toEqual(7);
+    });
+    it("Ejecuta el comando A con orientacion O", () => {
+        const automovil = new auto("5,8O");
+        ejecutarComando("A",automovil);
+        expect(automovil.getPosX).toEqual(4);
+    });
+    it("Ejecuta una serie de comandos", () => {
+        const automovil = new auto("1,1N");
+        ejecutarComando("ADDIAADI",automovil);
+        expect(automovil.getPosX).toEqual(3);
+        expect(automovil.getPosY).toEqual(2);
+        expect(automovil.getOrientacion).toEqual("E");
+    });
+    it("Ejecuta comandos estando en el N sin limites en x e y (-1,-1)", () => {
+        const automovil = new auto("1,1N");
+        ejecutarComando("ADDIAADI",automovil);
+        expect(automovil.getPosX).toEqual(3);
+        expect(automovil.getPosY).toEqual(2);
+        expect(automovil.getOrientacion).toEqual("E");
+    });
+    it("Se prueba los limites en y", () => {
+        const automovil = new auto("1,1N","1,3");
+        ejecutarComando("AAAAAA",automovil);
+        expect(automovil.getPosX).toEqual(1);
+        expect(automovil.getPosY).toEqual(3);
+        expect(automovil.getOrientacion).toEqual("N");
 
-
+    });
+    it("Se prueba los limites en y", () => {
+        const automovil = new auto("1,1S","1,3");
+        ejecutarComando("AAAAAA",automovil);
+        expect(automovil.getPosX).toEqual(1);
+        expect(automovil.getPosY).toEqual(0);
+        expect(automovil.getOrientacion).toEqual("S");
+    });
 });
