@@ -11,5 +11,7 @@ describe("Posicion del auto", () => {
     it("Solo permite el formato establecido: 'x,y' ", () => {
         expect(posAuto("1,2")).toEqual("Formato incorrecto");
     });
-    
+    it("Solo permite el formato establecido: 'x,y' " , () => {
+        expect(posAuto("1/2")).toEqual("Formato incorrecto");
+    });
 });
